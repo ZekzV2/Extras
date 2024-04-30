@@ -26,7 +26,6 @@ GetGlobal.Helper = "No one biatch"
 GetGlobal.User = Instance.new("VirtualInputManager")
 GetGlobal.AFK = false
 GetGlobal.Character = Player.Character or Player.CharacterAdded:Wait()
-GetGlobal.Protecter = Instance.new("Model", CoreGui)
 GetGlobal.GameId = game.GameId
 GetGlobal.AllPlayers = {}
 Protecter.RobloxLocked = true
@@ -408,8 +407,4 @@ Players.PlayerRemoving:Connect(function(v)
         local String = table.find(AllPlayers, v.Name)
         table.remove(AllPlayers, String)
     end
-end)
-
-RenderStepped:Connect(function()
-    VG.GetProtecter().Name = HttpService:GenerateGUID()
 end)
